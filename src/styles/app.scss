@@ -1,0 +1,293 @@
+/**
+ * HIDDEN
+ */
+
+ $black: #000000;
+ $white: #ffffff;
+ $red: #ff0000;
+
+ /* BASE STRUCTURE
+ ============================================================================= */
+
+
+html, body {
+  height:100vh;
+  font-size: 14px;
+}
+
+body {
+  font-family: $ff-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  	&.canvas {
+		background: none;
+		.branding a {
+			background: url('../assets/svg/hidden-white.svg') 0 0 no-repeat;
+		}
+		.navigation {
+ 			a {
+ 				color:$white;
+ 			}
+ 			a:hover,
+			a.router-link-active,
+			a.router-link-exact-active {
+		   		color: $red;
+		   		cursor: pointer;
+		 	}
+		}
+	}
+  	&.dark {
+		background: $black;
+		.branding a {
+			background: url('../assets/svg/hidden-white.svg') 0 0 no-repeat;
+		}
+		.navigation {
+ 			a {
+ 				color:$white;
+ 			}
+ 			a:hover,
+			a.router-link-active,
+			a.router-link-exact-active {
+		   		color: $red;
+		   		cursor: pointer;
+		 	}
+		}
+	}
+	&.light {
+		background: $white;
+		.branding a {
+			background: url('../assets/svg/hidden-black.svg') 0 0 no-repeat;
+		}
+		.navigation {
+ 			a {
+ 				color:$black;
+ 			}
+ 			a:hover,
+			a.router-link-active,
+			a.router-link-exact-active {
+		   		color: $red;
+		   		cursor: pointer;
+		 	}
+		}
+	}
+}
+
+
+.no-scroll {
+	overflow: hidden;
+}
+
+
+body.work {
+	.page {
+		padding-top: 100px;
+	}
+}
+
+
+.app {
+	margin: 0px auto 0 auto;
+	height:100vh;
+}
+
+.page {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 40px);
+  z-index: 0;
+  .child-page {
+  	position:relative;
+  	display: block;
+  	width: 100%;
+  	height:100vh;
+  }
+}
+
+// for pages that requir scrolling
+body.killer .page {
+	position:relative;
+	top: 0;
+	height: 100vh
+}
+
+
+
+.content {
+	//padding-top: 10rem;
+	h1 {
+		text-transform: uppercase;
+		font-size:1rem;
+		margin-bottom: 2.2rem;
+	}
+	p {
+		font-size:1rem;
+		line-height: 1.5rem;
+		margin-bottom: 2rem;
+	}
+}
+
+
+/* PAGE TRANSITION ANIMATION
+============================================================================= */
+
+.fade-enter-active, .fade-leave-active {
+  transition-property: opacity;
+  transition-duration: .25s;
+}
+
+.fade-enter-active {
+  transition-delay: 5s;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
+
+
+/* MASTHEAD
+============================================================================= */
+
+.masthead {
+	position: fixed;
+	width: 100%;
+	padding: 1rem 4rem 0 4rem;
+	z-index: 2;
+
+	.branding {
+		width: 114px;
+		height: 26px;
+		a {
+			background: url('../assets/svg/hidden-black.svg') 0 0 no-repeat;
+			width: 114px;
+			height: 26px;
+			display: block;
+		}
+	}
+
+	.navigation {
+		.level-item {
+			text-transform: uppercase;
+		}
+	}
+
+}
+
+
+
+.level-right .level-item:not(:last-child) {
+    margin-right: 2.5rem!important;
+}
+
+
+
+
+
+
+
+
+/* CIRCLE IMAGE + SIZES
+============================================================================= */
+
+.hector {
+	border-radius: 50%;
+	object-fit:cover;
+	width: 60px;
+	height: 60px;
+}
+
+.size-60 {
+	width: 60px;
+	height: 60px;
+}
+.size-100 {
+	width: 100px;
+	height: 100px;
+}
+
+.text-center {
+	text-align:center;
+}
+
+
+
+
+.animation-one {
+	position: fixed;
+	bottom:100px;
+	left: 25px;
+	width: 60px;
+	height: 60px;
+	z-index:1;
+	a {
+		display: block;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		border: none;
+		padding: 0;
+		background-color:#00ff00;
+	}
+}
+
+/* 	FLEXBOX CENTER
+============================================================================= */
+
+.box.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.box {
+  padding: .5rem;
+  height:100vh;
+  .section {
+  	margin: .25rem;
+  padding: .25rem;
+  }
+}
+
+/* 	CANVAS LAYOUT
+============================================================================= */
+
+.example1 canvas {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+}
+
+body.canvas canvas {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+}
+.canvas canvas {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+}
+
+
+
+/* 	WORK
+============================================================================= */
+
+.work .content {
+	padding-top: 130px;
+}
+
+.work {
+	figure {
+		img {
+			object-fit: cover;
+		}
+	}
+}
+
+
+/* CIRCLE IMAGE + SIZES
+============================================================================= */
