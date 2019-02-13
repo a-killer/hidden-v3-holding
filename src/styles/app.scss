@@ -17,8 +17,8 @@ html, body {
 }
 
 a, a:link, a:active, a:visited {
- transition: all 0.4s ease-out; 
- color:#ffffff; 
+ transition: all 0.4s ease-out;
+ color:#ffffff;
 }
 
 
@@ -193,7 +193,7 @@ body.killer .page {
 		}
 		a {
 			color: #FFFFFF;
-			transition: all 0.4s ease-out; 
+			transition: all 0.4s ease-out;
 			&:hover{
 				filter: blur(5px);
 				background-color: #49fb35;
@@ -322,6 +322,18 @@ body.canvas canvas {
 
 /* HOLDING PAGE INFO TEXT
 ============================================================================= */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to
+
+/* .fade-leave-active below version 2.1.8 */
+  {
+  opacity: 0;
+}
 
 .test {
 	position:absolute;
@@ -334,15 +346,15 @@ body.canvas canvas {
 }
 
 .brand {
-	z-index: 2;	
+	z-index: 2;
 }
 
 .navigation-container {
-	z-index: 2;	
+	z-index: 2;
 }
 
 #fullpage-container {
-	z-index: 0;	
+	z-index: 0;
 }
 
 #info {
@@ -371,7 +383,7 @@ body.canvas canvas {
 		}
 	}
 
-	
+
 
 }
 

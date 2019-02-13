@@ -1,16 +1,18 @@
 <template>
   <div id="fullpage-container">
-  
-  <div id="info" class="box flex">
-    <div class="item-content">
-      <div class="item">
-        <h1>Hidden is a next generation creative agency, producing engaging experiences, supporting grass-root talent, building bridges across disciplines with an ear-to-the-ground mentality and attitide</h1>
-        <h1>We elevate brands, assiting them in staying cultrally relevant and connecting them with the consumers of tomorrow</h1>
-        <h1>Connectes, agile, ideas lead and results driven, we are re-defining visual culture and creative strategy from the ground up.</h1>
-        <h1>Formed from a collective of thinkers and doers with over fifteen years of creative knoweloedge providing creative, strategy, art direction, design, digital and production services for culture, fashion and lifestyle industires.</h1>
+
+    <transition name="fade">
+      <div id="info" class="box flex" v-if="showInfo">
+        <div class="item-content">
+          <div class="item">
+            <h1>Hidden is a next generation creative agency, producing engaging experiences, supporting grass-root talent, building bridges across disciplines with an ear-to-the-ground mentality and attitide</h1>
+            <h1>We elevate brands, assiting them in staying cultrally relevant and connecting them with the consumers of tomorrow</h1>
+            <h1>Connectes, agile, ideas lead and results driven, we are re-defining visual culture and creative strategy from the ground up.</h1>
+            <h1>Formed from a collective of thinkers and doers with over fifteen years of creative knoweloedge providing creative, strategy, art direction, design, digital and production services for culture, fashion and lifestyle industires.</h1>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    </transition>
 
     <div id="fullpage">
       <div class="page-slide">
@@ -24,6 +26,7 @@
 import fimage from '../components/fimage.vue'
 import fvideo from '../components/fvideo.vue'
 import typeface from '../components/typeface.vue'
+import { EventBus } from '../App.vue';
 export default {
   name: 'Home',
   components: {
@@ -78,6 +81,7 @@ export default {
       prevTime:null,
       currentPageIndex:0,
       fullpageEl:null,
+      showInfo:false,
     }
   },
   beforeCreate: function() {
@@ -91,6 +95,9 @@ export default {
   mounted(){
     this.totalNumberOfPages = document.getElementsByClassName("page-slide").length;
     this.fullpageEl = document.getElementById("fullpage");
+    EventBus.$on('toggle-info', () => {
+      this.showInfo = !this.showInfo;
+    });
   },
   destroyed () {
     window.removeEventListener('scroll', this.handleScroll, false);

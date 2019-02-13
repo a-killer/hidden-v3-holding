@@ -34,6 +34,7 @@ export default {
 <style scoped>
   .video-container {
     height: 100%;
+    width: 100%;
   }
   .fullscreen-video {
     width: 100%;

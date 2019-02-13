@@ -1,7 +1,7 @@
 <template>
   <div class="app">
 
-    <Masthead/>
+    <Masthead ref="masthead"/>
     <!--<transition name="fade">-->
     <transition name="router-anim" enter-active-class="animated fadeIn"
     leave-active-class="animated fadeOut">
@@ -14,6 +14,7 @@
 <script>
 import AnimateOne from './components/AnimateOne.vue'
 import Masthead from './components/Masthead.vue'
+import Vue from 'vue';
 export default {
   name: 'App',
   components: {
@@ -21,6 +22,7 @@ export default {
     Masthead
   }
 }
+export const EventBus = new Vue();
 </script>
 
 <style lang="scss">
