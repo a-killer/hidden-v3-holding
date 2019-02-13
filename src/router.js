@@ -4,6 +4,7 @@ import Home from '@/pages/Home'
 import Work from '@/pages/Work'
 import About from '@/pages/About'
 import Project from '@/pages/Project'
+import Timeline from '@/pages/Timeline'
 //import Example1 from '@/pages/Example1'
 //import Example2 from '@/pages/Example2'
 
@@ -31,6 +32,11 @@ export default new Router({
       path: '/project',
       name: 'Project',
       component: Project
+    },
+    {
+      path: '/timeline',
+      name: 'Timeline',
+      component: Timeline
     }
     /*
     {

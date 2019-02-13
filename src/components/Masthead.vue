@@ -18,32 +18,45 @@
   </div>
     -->
 
+  <div>  
 
-  <div class="masthead">
+    <div class="brand">
+      <div class="branding">
+        <router-link :to="{ name: 'Home' }" exact></router-link>
+      </div>
+    </div>
+
+
+
+
+  <div class="navigation-container">
     <!-- Main container -->
-    <nav class="level">
-      <!-- Left side -->
-      <div class="level-left">
-        <div class="level-item">
-          <div class="branding">
-            <router-link :to="{ name: 'Home' }" exact></router-link>
-          </div>
-        </div>
-      </div>
-      <!-- Right side -->
-      <div class="level-right navigation">
-        <p class="level-item"><router-link :to="{ name: 'Work' }" exact>Work</router-link></p>
-        <p class="level-item"><router-link :to="{ name: 'About' }" exact>About</router-link></p>
-        <p class="level-item"><router-link :to="{ name: 'Project' }" exact>Gram</router-link></p>
-      </div>
+    <nav class="">
+      <ul class="navigation">
+        <li class="info-trigger"><a class="">INFO</a></li>
+      </ul>
     </nav>
     <!-- end Main container -->
   </div>
+
+
+</div>
   
 </template>
 
 <script>
 export default {
-  name: 'Masthead'
+  name: 'Masthead',
+  methods: {
+      toggleClass: function(event){
+         // Check value
+         if(this.isActive){
+           this.isActive = false;
+         }else{
+           this.isActive = true;
+         }
+
+      }
+    }
 }
 </script>

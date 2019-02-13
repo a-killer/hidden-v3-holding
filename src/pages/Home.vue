@@ -1,14 +1,20 @@
 <template>
   <div id="fullpage-container">
+  
+  <div id="info" class="box flex">
+    <div class="item-content">
+      <div class="item">
+        <h1>Hidden is a next generation creative agency, producing engaging experiences, supporting grass-root talent, building bridges across disciplines with an ear-to-the-ground mentality and attitide</h1>
+        <h1>We elevate brands, assiting them in staying cultrally relevant and connecting them with the consumers of tomorrow</h1>
+        <h1>Connectes, agile, ideas lead and results driven, we are re-defining visual culture and creative strategy from the ground up.</h1>
+        <h1>Formed from a collective of thinkers and doers with over fifteen years of creative knoweloedge providing creative, strategy, art direction, design, digital and production services for culture, fashion and lifestyle industires.</h1>
+      </div>
+    </div>
+  </div>
+
     <div id="fullpage">
       <div class="page-slide">
         <component v-bind:is="randomComponent" v-bind="page"></component>
-      </div>
-      <div class="page-slide" style="background:#d4ffd4">
-        <h1>About Hidden</h1>
-      </div>
-      <div class="page-slide" style="background:#b7b7fb">
-        <h1>Third Page</h1>
       </div>
     </div>
   </div>
@@ -35,12 +41,36 @@ export default {
     */
     return {
       pages: [
-        {id:1, type:"image", src:"/static/img/3.jpg"},
-        {id:2, type:"image", src:"/static/img/4.jpg"},
-        {id:3, type:"image", src:"/static/img/5.jpg"},
-        {id:4, type:"video", src:"/static/img/Swans - 1287.mp4", poster:"/static/img/swan-poster.png"},
-        {id:5, type:"video", src:"/static/img/Countdown - 2637.mp4", poster:"/static/img/countdown-poster.png"},
-        {id:6, type:"component", component:typeface},
+        {id:1, type:"video", src:"/static/video/HoldingPage_1.mp4", poster:"/static/img/poster.png"},
+        {id:2, type:"video", src:"/static/video/HoldingPage_2.mp4", poster:"/static/img/poster.png"},
+        {id:3, type:"video", src:"/static/video/HoldingPage_3.mp4", poster:"/static/img/poster.png"},
+        {id:4, type:"video", src:"/static/video/HoldingPage_4.mp4", poster:"/static/img/poster.png"},
+        {id:5, type:"video", src:"/static/video/HoldingPage_5.mp4", poster:"/static/img/poster.png"},
+        {id:6, type:"video", src:"/static/video/HoldingPage_6.mp4", poster:"/static/img/poster.png"},
+        {id:7, type:"video", src:"/static/video/HoldingPage_7.mp4", poster:"/static/img/poster.png"},
+        {id:8, type:"video", src:"/static/video/HoldingPage_8.mp4", poster:"/static/img/poster.png"},
+        {id:9, type:"video", src:"/static/video/HoldingPage_9.mp4", poster:"/static/img/poster.png"},
+        {id:10, type:"video", src:"/static/video/HoldingPage_10.mp4", poster:"/static/img/poster.png"},
+        {id:11, type:"video", src:"/static/video/HoldingPage_11.mp4", poster:"/static/img/poster.png"},
+        {id:12, type:"video", src:"/static/video/HoldingPage_12.mp4", poster:"/static/img/poster.png"},
+        {id:13, type:"video", src:"/static/video/HoldingPage_13.mp4", poster:"/static/img/poster.png"},
+        {id:14, type:"video", src:"/static/video/HoldingPage_14.mp4", poster:"/static/img/poster.png"},
+        {id:15, type:"video", src:"/static/video/HoldingPage_15.mp4", poster:"/static/img/poster.png"},
+        {id:16, type:"video", src:"/static/video/HoldingPage_16.mp4", poster:"/static/img/poster.png"},
+        {id:17, type:"video", src:"/static/video/HoldingPage_17.mp4", poster:"/static/img/poster.png"},
+        {id:18, type:"video", src:"/static/video/HoldingPage_18.mp4", poster:"/static/img/poster.png"},
+        {id:19, type:"video", src:"/static/video/HoldingPage_19.mp4", poster:"/static/img/poster.png"},
+        {id:20, type:"video", src:"/static/video/HoldingPage_20.mp4", poster:"/static/img/poster.png"},
+        {id:21, type:"video", src:"/static/video/HoldingPage_21.mp4", poster:"/static/img/poster.png"},
+        {id:22, type:"video", src:"/static/video/HoldingPage_22.mp4", poster:"/static/img/poster.png"},
+        {id:23, type:"video", src:"/static/video/HoldingPage_23.mp4", poster:"/static/img/poster.png"},
+        {id:24, type:"video", src:"/static/video/HoldingPage_24.mp4", poster:"/static/img/poster.png"},
+        {id:25, type:"video", src:"/static/video/HoldingPage_25.mp4", poster:"/static/img/poster.png"},
+        {id:26, type:"video", src:"/static/video/HoldingPage_26.mp4", poster:"/static/img/poster.png"},
+        {id:27, type:"video", src:"/static/video/HoldingPage_27.mp4", poster:"/static/img/poster.png"},
+        {id:28, type:"video", src:"/static/video/HoldingPage_28.mp4", poster:"/static/img/poster.png"},
+        {id:29, type:"video", src:"/static/video/HoldingPage_29.mp4", poster:"/static/img/poster.png"},
+        //{id:6, type:"component", component:typeface},
       ],
       page: null,
       lastScrollTop:0,

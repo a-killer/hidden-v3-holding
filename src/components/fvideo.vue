@@ -43,6 +43,7 @@ export default {
     object-fit: cover;
   }
   .toggle-audio {
+    display: none; /* temporarily for Holding site use only */
     position: absolute;
     width: 50px;
     height: 50px;
