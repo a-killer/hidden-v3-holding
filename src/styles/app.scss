@@ -21,16 +21,40 @@ a, a:link, a:active, a:visited {
  color:#ffffff;
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 
 
 body {
   font-family: $ff-base;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	-moz-osx-font-smoothing: grayscale;
+
+	#hi,
+	#dden {
+		opacity: 0;
+		transition: opacity 0.2ms ease-in-out;
+
+	}
+	#hi {
+		animation: fadein 2s forwards;
+	}
+	#dden {
+		animation: fadein 2s forwards;
+		animation-delay: 2s
+	}
+
   	&.canvas {
 		background: none;
 		.branding a {
-			background: url('../assets/svg/hidden-white.svg') 0 0 no-repeat;
+			// background: url('../assets/svg/hidden-white.svg') 0 0 no-repeat;
 		}
 		.navigation {
  			a {
@@ -47,7 +71,7 @@ body {
   	&.dark {
 		background: $black;
 		.branding a {
-			background: url('../assets/svg/hidden-white.svg') 0 0 no-repeat;
+			// background: url('../assets/svg/hidden-white.svg') 0 0 no-repeat;
 		}
 		.navigation {
  			a {
@@ -64,7 +88,7 @@ body {
 	&.light {
 		background: $white;
 		.branding a {
-			background: url('../assets/svg/hidden-black.svg') 0 0 no-repeat;
+			// background: url('../assets/svg/hidden-black.svg') 0 0 no-repeat;
 		}
 		.navigation {
  			a {
@@ -168,10 +192,15 @@ body.killer .page {
 		width: 114px;
 		height: 26px;
 		a {
-			background: url('../assets/svg/hidden-black.svg') 0 0 no-repeat;
+			// background: url('../assets/svg/hidden-black.svg') 0 0 no-repeat;
 			width: 114px;
 			height: 26px;
 			display: block;
+			svg {
+			  width: 114px;
+				height: 26px;
+				filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, .7));
+			}
 		}
 	}
 }
@@ -383,7 +412,18 @@ body.canvas canvas {
 		}
 	}
 
-
-
 }
 
+
+@media screen and (max-width: 768px) {
+  #info {
+    .item-content {
+      .item {
+        h1 {
+          font-size: 1.3rem;
+          line-height: 1.5rem;
+        }
+      }
+    }
+  }
+}
