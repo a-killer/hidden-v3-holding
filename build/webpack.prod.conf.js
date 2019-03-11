@@ -65,7 +65,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: process.env.NODE_ENV === 'testing'
         ? 'index.html'
-        : config.build.index,
+        : 'index.html',
       template: 'index.html',
       inject: true,
       minify: {
