@@ -9,6 +9,8 @@
             <h1>We elevate brands, assiting them in staying cultrally relevant and connecting them with the consumers of tomorrow</h1>
             <h1>Connectes, agile, ideas lead and results driven, we are re-defining visual culture and creative strategy from the ground up.</h1>
             <h1>Formed from a collective of thinkers and doers with over fifteen years of creative knoweloedge providing creative, strategy, art direction, design, digital and production services for culture, fashion and lifestyle industires.</h1>
+            <h1><br/><a href="mailto:studio@hidden-agency.com">studio@hidden-agency.com</a><br/>
+            <a href="https://www.instagram.com/hiddenagency/" target="_blank"><img src="../assets/svg/instagram.png" alt="Instagram" class="social-ig"></a></h1>
           </div>
         </div>
       </div>

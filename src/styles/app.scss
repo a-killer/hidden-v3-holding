@@ -185,7 +185,8 @@ body.killer .page {
 
 	.navigation {
 		text-transform: uppercase;
-		font-size: 1.7rem;
+		font-size: 1.6rem;
+		letter-spacing: 0.1rem;
 		font-weight: 500;
 		li {
 			margin-bottom: 0.3rem;
@@ -196,7 +197,7 @@ body.killer .page {
 			transition: all 0.4s ease-out;
 			&:hover{
 				filter: blur(5px);
-				background-color: #49fb35;
+				//background-color: #49fb35;
 				opacity: 0.3;
 				color:#ffffff;
 			}
@@ -322,9 +323,44 @@ body.canvas canvas {
 
 /* HOLDING PAGE INFO TEXT
 ============================================================================= */
+
+@keyframes crescendo {
+  0%   {
+  	transform: scale(0);
+  	opacity: 0;
+  }
+  50% {
+  	opacity: 0;
+  }
+  100% {
+  	opacity: 1;
+  	transform: scale(1);
+  }
+}
+
+@keyframes crescendoAlt {
+  0%   {
+  	transform: scale(1);
+  	opacity: 1;
+  }
+  60% {
+  	opacity: 0;
+  }
+  100% {
+  	opacity: 0;
+  	transform: scale(0);
+  }
+}
+
+
+
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity .5s;
+  animation: crescendo 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.fade-leave-active {
+  animation: crescendoAlt 0.8s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 }
 
 .fade-enter,
@@ -373,13 +409,17 @@ body.canvas canvas {
 		width: 100%;
 		.item {
 			height: auto;
-			width: 500px;
+			width: 600px;
 			h1 {
-				font-size: 1.5rem;
-				line-height:2rem;
+				font-size: 2rem;
+				line-height:2.6rem;
 				color: #f3f3f3;
-				margin-bottom: 2rem;
+				margin-bottom: 2.2rem;
 			}
+		}
+		.social-ig {
+			width:30px;
+			margin-top: 2rem;
 		}
 	}
 
