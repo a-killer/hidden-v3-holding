@@ -1,6 +1,6 @@
 <template>
 <div class="video-container">
-  <video ref="video" class="fullscreen-video" :src="src" :poster="poster"playsinline muted loop autoplay></video>
+  <video ref="video" class="fullscreen-video" :src="src" :poster="poster" playsinline muted loop autoplay></video>
   <div class="toggle-audio" v-on:click="toggleAudio()"></div>
 </div>
 </template>
@@ -57,5 +57,14 @@ export default {
   }
   .toggle-audio.active {
     background: blue;
+  }
+  video::-webkit-media-controls {
+    display: none;
+  }
+  video::-webkit-media-controls-start-playback-button {
+      display: none;
+  }
+  video {
+    pointer-events: none;
   }
 </style>
