@@ -593,6 +593,7 @@ body.canvas canvas {
   }
 
   #refresh {
+  	display:none;
   	&.box { padding: 20px; }
     .item-content {
       .item {
