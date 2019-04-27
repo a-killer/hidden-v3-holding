@@ -22,8 +22,8 @@
   <transition name="fade">
     <div id="refresh" class="box flex" v-if="!showInfo">
       <div class="item-content">
-        <div class="item">
-          <a href="/"><img src="/static/img/holding_btn.png" alt="Hidden Agency" class="flicker-1"></a>
+        <div class="item flicker-1">
+          <a href="/"><img src="/static/img/holding_btn.png" alt="Hidden Agency" class="rotate-center"></a>
         </div>
       </div>
     </div>
